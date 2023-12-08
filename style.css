@@ -1,0 +1,417 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('Ephesis-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 99;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#loader h1 {
+    font-size: 5vw;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    height: 15vw;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 1.5vw;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#content {
+    text-align: center;
+    font-size: 2vw;
+}
+
+
+
+/* main */
+#main {
+    height: 100vh;
+    width: 100%;
+}
+
+
+#lock-screen {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/956/988/935/fantasy-art-digital-art-pixelated-artwork-wallpaper-preview.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: 90;
+}
+
+#lock-screen-content {
+    margin-top: 7vw;
+    display: flex;
+    flex-direction: column;
+    padding: 0 6vw;
+}
+
+#lock-screen-content h1 {
+    color: white;
+    font-size: 6vw;
+    font-weight: 600;
+}
+
+#lock-screen-content h3 {
+    color: white;
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+#btn {
+    position: absolute;
+    height: 2vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    bottom: 10%;
+    padding: 0 5vw;
+}
+
+#btn button {
+    font-size: 1.8vw;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 9px;
+    background-color: #191923;
+    color: #34c8fd;
+    font-weight: 800;
+}
+
+#bottom-content {
+    position: absolute;
+    height: 2vw;
+    width: 50%;
+    padding: 0 6vw;
+    top: 42vw;
+}
+
+#bottom-content p {
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: overline;
+
+}
+
+
+
+/* HomeScreen */
+#home-screen {
+    height: 100%;
+    width: 100%;
+    background-image: url(./mountain.jpg);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#icon-tray {
+    width: 6vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    padding: 0 2.3vw;
+    border-bottom-right-radius: 50px;
+    background: linear-gradient(rgba(10, 30, 57, 0.82), rgba(23, 28, 51, 0.533));
+    border-top-right-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.icon {
+    color: white;
+    font-size: 2vw;
+    cursor: pointer;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.icon p {
+    display: none;
+    font-size: 1.3vw;
+}
+
+.icon:hover p {
+    display: block;
+    color: white;
+}
+
+/* ______________________________________________________________________ */
+/* Window */
+#apps {
+    margin-right: 5vw;
+    backdrop-filter: blur(10px);
+}
+
+.app h1 {
+    text-align: center;
+    letter-spacing: 1vw;
+    font-weight: 600;
+    font-family: "myFont";
+    text-wrap: nowrap;
+}
+
+.app {
+    box-shadow: inset 0px 0px 17px 8px #f6f4f456;
+    border-radius: 9px;
+    height: 85vh;
+    width: 85vw;
+    color: white;
+    font-size: 1.3vw;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+
+#profile {
+    display: none;
+    background-color: rgba(40, 6, 72, 0.523);
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.image p {
+    font-size: 4.7vw;
+    letter-spacing: 1vw;
+    font-weight: 600;
+    font-family: "myFont";
+    text-wrap: nowrap;
+}
+
+.image img {
+    height: 150px;
+
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding: 3vw 2vw;
+    line-height: 4vw;
+}
+
+#left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1vw;
+    background-color: rgba(1, 61, 84, 0.373);
+    border-radius: 18px;
+    padding: 0 14px;
+    transform: translateZ(40px);
+}
+
+#right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1vw;
+}
+
+.key,
+.value {
+    width: 50%;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 6vw;
+    font-size: 1.8vw;
+}
+
+.links i {
+    cursor: pointer;
+}
+
+/* __________Academics_____________ */
+#academics {
+    display: none;
+    background-color: rgba(70, 0, 135, 0.401);
+    padding: 0 4vw;
+    transform-style: preserve-3d;
+
+}
+
+#academics h1 {
+    font-family: 'myFont';
+    font-size: 4vw;
+}
+
+.std {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    border-radius: 19px;
+    background-color: rgba(40, 0, 57, 0.774);
+    margin: 10px 0;
+    padding: 0 4vw;
+    transition: 0.2s;
+    transform: translateZ(30px);
+}
+
+.std:hover {
+    box-shadow: 0px 0px 17px 8px #efefef56
+}
+
+.std a {
+    color: aqua;
+    font-family: 'myFont';
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.std a:hover {
+    scale: 1.1;
+}
+
+.std h3 {
+    margin: 15px 0;
+    text-decoration: underline;
+}
+
+.marksheet {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+
+}
+
+
+
+#skills {
+    display: none;
+    background-color: rgba(0, 0, 74, 0.466);
+    padding: 0 3vw;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+#skills h1 {
+    border-bottom: 4px solid white;
+    letter-spacing: 1vw;
+    font-family: 'myFont';
+    font-size: 4vw;
+    overflow: hidden;
+}
+
+.skil {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vw;
+}
+
+.kno {
+    background-color: #0000005b;
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    gap: 20px;
+    transition: 0.2s;
+    transform: translateZ(30px);
+}
+
+.kno:hover {
+    scale: 1.1;
+    box-shadow: 0px 0px 17px 8px rgba(70, 190, 255, 0.337)
+}
+
+.skil h3 {
+    margin-bottom: 3vw;
+    font-family: 'myFont';
+    font-size: 2.7vw;
+    letter-spacing: 5px;
+}
+
+
+
+#projects {
+    display: none;
+    background-color: rgba(78, 0, 75, 0.368);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 4vw 3vw;
+}
+
+.prj {
+    background-color: rgba(124, 63, 116, 0.362);
+    border-radius: 19px;
+    padding: 1vw 2vw;
+    transition: 0.2s;
+}
+.prj:hover {
+    box-shadow: 0px 0px 17px 8px #eee8e861;
+}
+.prj h2 {
+    text-decoration: underline;
+    margin-bottom: 4px;
+}
+#tools {
+    display: none;
+    background-color: rgba(49, 1, 52, 0.438);
+}
