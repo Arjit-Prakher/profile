@@ -56,6 +56,20 @@ body {
     font-size: 2vw;
 }
 
+@media (max-width: 500px) {
+    #loader h1 {
+        font-size: 10vw;
+    }
+
+    #content {
+        font-size: 4vw;
+    }
+
+}
+
+
+
+
 
 
 /* main */
@@ -73,9 +87,15 @@ body {
     background-position: center;
     background-size: cover;
     z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16vw;
 }
 
 #lock-screen-content {
+    width: 100%;
     margin-top: 7vw;
     display: flex;
     flex-direction: column;
@@ -94,7 +114,7 @@ body {
     font-weight: 300;
 }
 
-#btn {
+/* #btn {
     position: absolute;
     height: 2vw;
     width: 100%;
@@ -103,7 +123,7 @@ body {
     justify-content: flex-end;
     bottom: 10%;
     padding: 0 5vw;
-}
+} */
 
 #btn button {
     font-size: 1.8vw;
@@ -115,20 +135,75 @@ body {
     font-weight: 800;
 }
 
-#bottom-content {
-    position: absolute;
-    height: 2vw;
-    width: 50%;
+.bottom-content {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 6vw;
-    top: 42vw;
+    flex-direction: row-reverse;
+    width: 100%;
 }
 
-#bottom-content p {
+#tag-line p {
     color: white;
     font-size: 17px;
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: overline;
+}
+
+/* #bottom-content {
+    position: absolute;
+    height: 2vw;
+    width: 50%;
+    padding: 0 6vw;
+    top: 42vw;
+} */
+
+/* #bottom-content p {
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: overline;
+    
+} */
+@media (max-width: 500px) {
+    #lock-screen {
+        gap: 40vh;
+    }
+
+    #lock-screen-content {
+        margin-top: 22vh;
+    }
+
+    #lock-screen-content h1 {
+        font-size: 10vw;
+    }
+
+    #lock-screen-content h3 {
+        font-size: 7vw;
+    }
+
+    .bottom-content {
+        padding: 0 3vw;
+        flex-direction: column-reverse;
+        gap: 5vh;
+        width: 100%;
+    }
+
+    #tag-line p {
+        color: white;
+        font-size: 17px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    #btn button {
+        font-size: 4.8vw;
+    }
 
 }
 
@@ -179,8 +254,33 @@ body {
     color: white;
 }
 
+@media (max-width: 500px) {
+    #home-screen {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding-bottom: 20%;
+    }
+
+    #icon-tray {
+        background: transparent;
+        backdrop-filter: blur(0);
+        flex-direction: row;
+        width: 100%;
+        height: 10vw;
+        gap: 10%;
+    }
+
+    .icon {
+        font-size: 8vw;
+    }
+
+    .icon:hover p {
+        display: none;
+    }
+}
+
 /* ______________________________________________________________________ */
-/* Window */
+/* app */
 #apps {
     margin-right: 5vw;
     backdrop-filter: blur(10px);
@@ -205,7 +305,21 @@ body {
     perspective: 1000px;
 }
 
+@media (max-width: 500px) {
+    #apps {
+        margin: 25px;
+    }
 
+    .app {
+        height: 65vh;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+}
+
+
+/*__________________ Windows_________________ */
 #profile {
     display: none;
     background-color: rgba(40, 6, 72, 0.523);
@@ -276,6 +390,51 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 500px) {
+    .image {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .image img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .image p {
+        font-size: 7.7vw;
+        letter-spacing: 1.4vw;
+        font-weight: 800;
+    }
+
+    .details {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 17px;
+    }
+
+    #left {
+        width: 100%;
+        font-size: 3vw;
+        line-height: 55px;
+    }
+
+    #right {
+        width: 100%;
+        font-size: 3vw;
+    }
+
+    #right p {
+        font-size: 3vw;
+        line-height: 20px;
+    }
+
+    .links {
+        font-size: 3.5vw;
+    }
+}
+
 /* __________Academics_____________ */
 #academics {
     display: none;
@@ -335,6 +494,26 @@ body {
 
 }
 
+@media (max-width: 500px) {
+    #academics h1 {
+        font-size: 10vw;
+    }
+
+    .std h3 {
+        font-size: 3vw;
+        text-decoration: none;
+    }
+
+    .marksheet {
+        font-size: 3vw;
+        line-height: 50px;
+    }
+
+    .std {
+        margin: 5vw 0;
+    }
+}
+
 
 
 #skills {
@@ -346,7 +525,6 @@ body {
 }
 
 #skills h1 {
-    border-bottom: 4px solid white;
     letter-spacing: 1vw;
     font-family: 'myFont';
     font-size: 4vw;
@@ -383,6 +561,29 @@ body {
     letter-spacing: 5px;
 }
 
+@media (max-width: 500px) {
+
+    .skil {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        height: 100%;
+    }
+
+    .kno {
+        width: 100%;
+        font-size: 3vw;
+    }
+    .kno h3{
+        font-size: 6vw;
+    }
+
+    #skills h1 {
+        font-size: 10vw;
+    }
+}
+
 
 
 #projects {
@@ -404,14 +605,52 @@ body {
     padding: 1vw 2vw;
     transition: 0.2s;
 }
+
 .prj:hover {
     box-shadow: 0px 0px 17px 8px #eee8e861;
 }
+
 .prj h2 {
     text-decoration: underline;
     margin-bottom: 4px;
 }
+
+@media (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    #projects h1 {
+        font-size: 10vw;
+        letter-spacing: normal;
+    }
+    .prj {
+        padding: 2vw 3vw;
+        width: 100%;
+    }
+    .prj h2 {
+        font-size: 4vw;
+        text-decoration: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .prj p {
+        font-size: 3vw;
+    }
+}
+
 #tools {
     display: none;
     background-color: rgba(49, 1, 52, 0.438);
+}
+@media (max-width: 500px) {
+    #tools h1 {
+        font-size: 10vw;
+    }
+    #tools .prj {
+        width: 75%;
+    }
 }
