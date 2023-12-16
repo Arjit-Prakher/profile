@@ -68,19 +68,14 @@ function lockScreen() {
 
 
 function homeScreen() {
-    let tl3 = gsap.timeline()
-    let tl4 = gsap.timeline()
-    let tl5 = gsap.timeline()
-
     let activeApp = null
-
+    
     let icons = document.querySelectorAll(".icon");
     let apps = document.querySelectorAll(".app");
 
     for (let i = 0; i < icons.length; i++) {
         icons[i].addEventListener("click", function (event) {
             event.preventDefault();
-            console.log(icons[i])
             if (activeApp !== null) {
                 activeApp.style.display = "none"
             }
@@ -89,32 +84,11 @@ function homeScreen() {
             } else {
                 apps[i].style.display = "block"
                 activeApp = apps[i]
-                tl3.from(".app", {
+                gsap.from(".app", {
                     scale: 0.4,
-                    duration: 0.4,
+                    duration: 0.8,
                     ease: "power3",
                     opacity: 0
-                })
-                tl3.from(".details, .key p, .value p, .links i, #right p", {
-                    opacity: 0,
-                    duration: 0.1,
-                    x: 10,
-                })  
-                gsap.from(".std", {
-                    opacity: 0,
-                    scale: 1.1,
-                    ease: "power4",
-                    duration: 0.4,
-                })
-                tl5.from(".skil", {
-                    opacity: 0,
-                    scale: 1.1,
-                    duration: 0.3,
-                })
-                tl5.from(".kno p", {
-                    opacity: 0,
-                    x: -10,
-                    duration: 0.4
                 })
             }
         });
