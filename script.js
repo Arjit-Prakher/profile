@@ -85,9 +85,9 @@ function homeScreen() {
                 apps[i].style.display = "block"
                 activeApp = apps[i]
                 gsap.from(".app", {
-                    scale: 0.4,
+                    scale: 0.2,
                     duration: 0.8,
-                    ease: "power3",
+                    // ease: "back.out(1.7)",
                     opacity: 0
                 })
             }
