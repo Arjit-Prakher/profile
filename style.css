@@ -183,7 +183,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0.4vw;
+    padding-left: 0.4vw;
 }
 
 #icon-tray {
@@ -196,8 +196,6 @@ body {
     padding: 0 1.7vw;
     border-radius: 18px;
     background: linear-gradient(rgba(10, 30, 57, 0.82), rgba(23, 28, 51, 0.533));
-    backdrop-filter: blur(10px);
-    animation-duration: 0.4s;
 }
 
 .icon {
@@ -224,14 +222,13 @@ body {
     #home-screen {
         flex-direction: column-reverse;
         justify-content: space-between;
-        padding-bottom: 20%;
+        padding-bottom: 15%;
     }
 
     #icon-tray {
-        backdrop-filter: blur(8px);
         flex-direction: row;
         width: 80%;
-        height: 80px;
+        height: 50px;
         justify-content: space-evenly;
     }
 
@@ -262,7 +259,7 @@ body {
 
 .app {
     background: rgb(0, 0, 0);
-    background: linear-gradient(346deg, rgba(49, 54, 54, 0.796) 42%, rgba(9, 9, 121, 0.18539915966386555) 80%, rgba(132, 0, 255, 0) 100%);
+    background: linear-gradient(25deg, rgba(49, 54, 54, 0.796) 42%, rgba(9, 9, 121, 0.18539915966386555) 80%, rgba(132, 0, 255, 0) 100%);
     border-radius: 9px;
     height: 90vh;
     width: 85vw;
